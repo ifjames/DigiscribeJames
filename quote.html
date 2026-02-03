@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Get Quote - DigiScribe Transcription Corp.</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#0ea5e9',
+                        'primary-dark': '#0284c7',
+                        'blue-card': '#0ea5e9',
+                        'dark-text': '#1e293b',
+                        'gray-text': '#64748b',
+                        'light-gray': '#f1f5f9',
+                    },
+                    fontFamily: {
+                        poppins: ['Poppins', 'sans-serif'],
+                    },
+                }
+            }
+        }
+    </script>
+    <style>
+        .wave-pattern {
+            background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1440 320'%3E%3Cpath fill='%23ffffff' fill-opacity='0.1' d='M0,96L48,112C96,128,192,160,288,186.7C384,213,480,235,576,213.3C672,192,768,128,864,128C960,128,1056,192,1152,208C1248,224,1344,192,1392,176L1440,160L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z'%3E%3C/path%3E%3C/svg%3E") no-repeat bottom;
+            background-size: cover;
+        }
+        .sound-wave {
+            display: flex;
+            align-items: center;
+            gap: 2px;
+        }
+        .sound-wave span {
+            display: inline-block;
+            width: 3px;
+            background: linear-gradient(to top, #0ea5e9, #38bdf8);
+            border-radius: 2px;
+        }
+    </style>
+</head>
+<body class="bg-white font-poppins">
+    <!-- Header Navigation -->
+    <header class="bg-gray-50/70 backdrop-blur-lg shadow-sm sticky top-0 z-50 border-b border-gray-100/50">
+        <nav class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <!-- Logo -->
+                <a href="index.html" class="flex items-center">
+                    <img src="images/DigiscribeLogoRB.png" alt="DigiScribe Transcription Corp." class="h-10 w-auto">
+                </a>
+
+                <!-- Navigation Links -->
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="index.html" class="text-dark-text hover:text-primary text-base font-medium transition-colors">Home</a>
+                    <a href="about.html" class="text-dark-text hover:text-primary text-base font-medium transition-colors">About</a>
+                    <div class="relative group">
+                        <a href="projects.html" class="text-dark-text hover:text-primary text-base font-medium transition-colors flex items-center gap-1">
+                            Projects
+                            <svg class="w-4 h-4 transition-transform duration-200 group-hover:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                            </svg>
+                        </a>
+                        <!-- Projects Dropdown -->
+                        <div class="absolute top-full left-0 mt-2 w-48 bg-white rounded-xl shadow-lg border border-gray-100 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 ease-in-out transform translate-y-2 group-hover:translate-y-0 z-50">
+                            <div class="py-2">
+                                <a href="projects.html#app-marketplace" class="flex items-center gap-3 px-4 py-2.5 text-sm text-gray-text hover:text-primary hover:bg-gray-50 transition-colors">
+                                    <i class="fas fa-store text-primary/60 w-4"></i>
+                                    App Marketplace
+                                </a>
+                                <a href="projects.html#patient-fusion" class="flex items-center gap-3 px-4 py-2.5 text-sm text-gray-text hover:text-primary hover:bg-gray-50 transition-colors">
+                                    <i class="fas fa-user-injured text-primary/60 w-4"></i>
+                                    Patient Fusion
+                                </a>
+                                <a href="projects.html#practice-fusion" class="flex items-center gap-3 px-4 py-2.5 text-sm text-gray-text hover:text-primary hover:bg-gray-50 transition-colors">
+                                    <i class="fas fa-clinic-medical text-primary/60 w-4"></i>
+                                    Practice Fusion
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="relative group">
+                        <a href="services.html" class="text-dark-text hover:text-primary text-base font-medium transition-colors flex items-center gap-1">
+                            Services
+                            <svg class="w-4 h-4 transition-transform duration-200 group-hover:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                            </svg>
+                        </a>
+                        <!-- Services Dropdown -->
+                        <div class="absolute top-full left-0 mt-2 w-56 bg-white rounded-xl shadow-lg border border-gray-100 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 ease-in-out transform translate-y-2 group-hover:translate-y-0 z-50">
+                            <div class="py-2">
+                                <a href="services.html#transcription" class="flex items-center gap-3 px-4 py-2.5 text-sm text-gray-text hover:text-primary hover:bg-gray-50 transition-colors">
+                                    <i class="fas fa-file-medical text-primary/60 w-4"></i>
+                                    Medical Transcription
+                                </a>
+                                <a href="services.html#data-entry" class="flex items-center gap-3 px-4 py-2.5 text-sm text-gray-text hover:text-primary hover:bg-gray-50 transition-colors">
+                                    <i class="fas fa-database text-primary/60 w-4"></i>
+                                    Data Entry & EMR
+                                </a>
+                                <a href="services.html#claims" class="flex items-center gap-3 px-4 py-2.5 text-sm text-gray-text hover:text-primary hover:bg-gray-50 transition-colors">
+                                    <i class="fas fa-file-invoice-dollar text-primary/60 w-4"></i>
+                                    Claims Processing
+                                </a>
+                                <a href="services.html#rcm" class="flex items-center gap-3 px-4 py-2.5 text-sm text-gray-text hover:text-primary hover:bg-gray-50 transition-colors">
+                                    <i class="fas fa-chart-line text-primary/60 w-4"></i>
+                                    Revenue Cycle (RCM)
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Get Quote Button -->
+                <a href="quote.html" class="bg-primary hover:bg-primary-dark text-white px-5 py-2 rounded-full text-sm font-medium transition-colors">
+                    Get Quote
+                </a>
+
+                <!-- Mobile Menu Button -->
+                <button class="md:hidden text-dark-text">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                    </svg>
+                </button>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Main Content -->
+    <main class="py-12">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <!-- Page Title -->
+            <h1 class="text-2xl md:text-3xl font-semibold gradient-text text-center mb-10">Get Quote</h1>
+
+            <!-- Contact Section -->
+            <div class="bg-white rounded-xl shadow-lg overflow-hidden">
+                <div class="flex flex-col lg:flex-row">
+                    <!-- Left Side - Contact Information Card -->
+                    <div class="lg:w-2/5 bg-primary text-white p-8 lg:p-10 relative overflow-hidden wave-pattern min-h-[480px]">
+                        <h2 class="text-xl font-semibold mb-2">Contact Information</h2>
+                        <p class="text-white/80 text-sm mb-10">Contact us now!</p>
+
+                        <div class="space-y-6">
+                            <!-- Phone -->
+                            <div class="flex items-center gap-4">
+                                <div class="w-10 h-10 bg-white/10 rounded-full flex items-center justify-center">
+                                    <i class="fas fa-phone text-white text-sm"></i>
+                                </div>
+                                <span class="text-sm">(043) 233-2030</span>
+                            </div>
+
+                            <!-- Email -->
+                            <div class="flex items-center gap-4">
+                                <div class="w-10 h-10 bg-white/10 rounded-full flex items-center justify-center">
+                                    <i class="fas fa-envelope text-white text-sm"></i>
+                                </div>
+                                <span class="text-sm">info@digiscribeaspacific.com</span>
+                            </div>
+
+                            <!-- Address -->
+                            <div class="flex items-start gap-4">
+                                <div class="w-10 h-10 bg-white/10 rounded-full flex items-center justify-center flex-shrink-0">
+                                    <i class="fas fa-map-marker-alt text-white text-sm"></i>
+                                </div>
+                                <span class="text-sm leading-relaxed">
+                                    3rd Flr VICMAR Bldg, P Burgos St,<br>
+                                    Batangas, III Batangas City,<br>
+                                    Philippines 4200
+                                </span>
+                            </div>
+                        </div>
+
+                        <!-- Decorative circles -->
+                        <div class="absolute bottom-0 right-0 w-32 h-32 bg-white/5 rounded-full translate-x-1/2 translate-y-1/2"></div>
+                        <div class="absolute bottom-20 right-10 w-20 h-20 bg-white/5 rounded-full"></div>
+                    </div>
+
+                    <!-- Right Side - Form -->
+                    <div class="lg:w-3/5 p-8 lg:p-10">
+                        <form class="space-y-6">
+                            <!-- Name Row -->
+                            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                                <div>
+                                    <label class="block text-xs text-gray-text mb-2">First Name</label>
+                                    <input type="text" placeholder="" class="w-full border-b border-gray-300 pb-2 text-sm focus:outline-none focus:border-primary transition-colors">
+                                </div>
+                                <div>
+                                    <label class="block text-xs text-gray-text mb-2">Last Name</label>
+                                    <input type="text" placeholder="coalition" class="w-full border-b border-gray-300 pb-2 text-sm focus:outline-none focus:border-primary transition-colors">
+                                </div>
+                            </div>
+
+                            <!-- Email & Contact Row -->
+                            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                                <div>
+                                    <label class="block text-xs text-gray-text mb-2">Email</label>
+                                    <input type="email" placeholder="" class="w-full border-b border-gray-300 pb-2 text-sm focus:outline-none focus:border-primary transition-colors">
+                                </div>
+                                <div>
+                                    <label class="block text-xs text-gray-text mb-2">Contact Number</label>
+                                    <input type="tel" placeholder="+63 949 306 8360" class="w-full border-b border-gray-300 pb-2 text-sm focus:outline-none focus:border-primary transition-colors">
+                                </div>
+                            </div>
+
+                            <!-- Subject Selection -->
+                            <div>
+                                <label class="block text-xs text-gray-text mb-4">Select Subject?</label>
+                                <div class="flex flex-wrap gap-x-6 gap-y-3">
+                                    <label class="flex items-center gap-2 cursor-pointer">
+                                        <input type="radio" name="subject" value="service-details" class="w-4 h-4 text-primary accent-primary" checked>
+                                        <span class="text-xs text-gray-600">Service Details</span>
+                                    </label>
+                                    <label class="flex items-center gap-2 cursor-pointer">
+                                        <input type="radio" name="subject" value="service-status" class="w-4 h-4 text-primary accent-primary">
+                                        <span class="text-xs text-gray-600">Service Status</span>
+                                    </label>
+                                    <label class="flex items-center gap-2 cursor-pointer">
+                                        <input type="radio" name="subject" value="general-inquiry" class="w-4 h-4 text-primary accent-primary">
+                                        <span class="text-xs text-gray-600">General Inquiry</span>
+                                    </label>
+                                    <label class="flex items-center gap-2 cursor-pointer">
+                                        <input type="radio" name="subject" value="transcription" class="w-4 h-4 text-primary accent-primary">
+                                        <span class="text-xs text-gray-600">Transcription Services</span>
+                                    </label>
+                                </div>
+                            </div>
+
+                            <!-- Message -->
+                            <div>
+                                <label class="block text-xs text-gray-text mb-2">Message</label>
+                                <textarea rows="4" placeholder="Write your message..." class="w-full border-b border-gray-300 pb-2 text-sm focus:outline-none focus:border-primary transition-colors resize-none"></textarea>
+                            </div>
+
+                            <!-- Submit Button -->
+                            <div class="flex justify-end pt-4">
+                                <button type="submit" class="bg-primary hover:bg-primary-dark text-white px-8 py-3 rounded-md text-sm font-medium transition-colors">
+                                    Send Message
+                                </button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-white border-t border-gray-100 mt-16">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <!-- Company Info -->
+                <div>
+                    <a href="#" class="inline-block mb-4">
+                        <img src="images/DigiscribeLogoRB.png" alt="DigiScribe Transcription Corp." class="h-8 w-auto">
+                    </a>
+                    <p class="text-xs text-gray-text leading-relaxed mb-6">
+                        A Philippine-based Medical Transcription Company Serving the Information Technology Enabled Services (ITES) Sector.
+                    </p>
+                    <div class="flex gap-3">
+                        <a href="#" class="w-8 h-8 bg-primary rounded flex items-center justify-center hover:bg-primary-dark transition-colors">
+                            <i class="fab fa-linkedin-in text-white text-sm"></i>
+                        </a>
+                        <a href="#" class="w-8 h-8 bg-primary rounded flex items-center justify-center hover:bg-primary-dark transition-colors">
+                            <i class="fab fa-facebook-f text-white text-sm"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Office Hours -->
+                <div>
+                    <h3 class="text-sm font-semibold text-dark-text mb-4">Office Hours</h3>
+                    <div class="space-y-2 text-xs text-gray-text">
+                        <p>Monday - Saturday: 7:00 AM - 6:00 PM</p>
+                        <p>Sunday: Closed</p>
+                        <a href="#" class="text-primary hover:underline block mt-3">Philippine Standard Time (PST)</a>
+                    </div>
+                </div>
+
+                <!-- Contact Us -->
+                <div>
+                    <h3 class="text-sm font-semibold text-dark-text mb-4">Contact Us</h3>
+                    <div class="space-y-2 text-xs text-gray-text">
+                        <p>3rd Flr VICMAR Bldg, P Burgos St,<br>Batangas, III Batangas City,<br>Philippines 4200</p>
+                        <p class="pt-2">(043) 233-2030</p>
+                        <p>info@digiscribeaspacific.com</p>
+                    </div>
+                </div>
+
+                <!-- Quick Links -->
+                <div>
+                    <h3 class="text-sm font-semibold text-dark-text mb-4">Quick Links</h3>
+                    <ul class="space-y-2 text-xs text-gray-text">
+                        <li><a href="index.html" class="hover:text-primary transition-colors">Home</a></li>
+                        <li><a href="about.html" class="hover:text-primary transition-colors">About Us</a></li>
+                        <li><a href="#" class="hover:text-primary transition-colors">Projects</a></li>
+                        <li><a href="#" class="hover:text-primary transition-colors">Services</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- Copyright -->
+        <div class="border-t border-gray-100">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
+                <p class="text-center text-xs text-gray-400">
+                    Digiscribe Transcription Corp 2024 © All Rights Reserved
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Navbar Script -->
+    <script src="navbar.js"></script>
+</body>
+</html>

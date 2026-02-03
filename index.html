@@ -1,0 +1,482 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home - DigiScribe Transcription Corp.</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#0ea5e9',
+                        'primary-dark': '#0284c7',
+                        'dark-text': '#1e293b',
+                        'gray-text': '#64748b',
+                    },
+                    fontFamily: {
+                        poppins: ['Poppins', 'sans-serif'],
+                    },
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-white font-poppins">
+    <!-- Header Navigation -->
+    <header class="bg-gray-50/70 backdrop-blur-lg shadow-sm sticky top-0 z-50 border-b border-gray-100/50">
+        <nav class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-20">
+                <!-- Logo -->
+                <a href="index.html" class="flex items-center">
+                    <img src="images/DigiscribeLogoRB.png" alt="DigiScribe Transcription Corp." class="h-10 w-auto">
+                </a>
+
+                <!-- Navigation Links -->
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="index.html" class="text-primary text-base font-medium transition-colors">Home</a>
+                    <a href="about.html" class="text-dark-text hover:text-primary text-base font-medium transition-colors">About</a>
+                    <div class="relative group">
+                        <a href="projects.html" class="text-dark-text hover:text-primary text-base font-medium transition-colors flex items-center gap-1">
+                            Projects
+                            <svg class="w-4 h-4 transition-transform duration-200 group-hover:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                            </svg>
+                        </a>
+                        <!-- Projects Dropdown -->
+                        <div class="absolute top-full left-0 mt-2 w-48 bg-white rounded-xl shadow-lg border border-gray-100 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 ease-in-out transform translate-y-2 group-hover:translate-y-0 z-50">
+                            <div class="py-2">
+                                <a href="projects.html#app-marketplace" class="flex items-center gap-3 px-4 py-2.5 text-sm text-gray-text hover:text-primary hover:bg-gray-50 transition-colors">
+                                    <i class="fas fa-store text-primary/60 w-4"></i>
+                                    App Marketplace
+                                </a>
+                                <a href="projects.html#patient-fusion" class="flex items-center gap-3 px-4 py-2.5 text-sm text-gray-text hover:text-primary hover:bg-gray-50 transition-colors">
+                                    <i class="fas fa-user-injured text-primary/60 w-4"></i>
+                                    Patient Fusion
+                                </a>
+                                <a href="projects.html#practice-fusion" class="flex items-center gap-3 px-4 py-2.5 text-sm text-gray-text hover:text-primary hover:bg-gray-50 transition-colors">
+                                    <i class="fas fa-clinic-medical text-primary/60 w-4"></i>
+                                    Practice Fusion
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="relative group">
+                        <a href="services.html" class="text-dark-text hover:text-primary text-base font-medium transition-colors flex items-center gap-1">
+                            Services
+                            <svg class="w-4 h-4 transition-transform duration-200 group-hover:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                            </svg>
+                        </a>
+                        <!-- Services Dropdown -->
+                        <div class="absolute top-full left-0 mt-2 w-56 bg-white rounded-xl shadow-lg border border-gray-100 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 ease-in-out transform translate-y-2 group-hover:translate-y-0 z-50">
+                            <div class="py-2">
+                                <a href="services.html#transcription" class="flex items-center gap-3 px-4 py-2.5 text-sm text-gray-text hover:text-primary hover:bg-gray-50 transition-colors">
+                                    <i class="fas fa-file-medical text-primary/60 w-4"></i>
+                                    Medical Transcription
+                                </a>
+                                <a href="services.html#data-entry" class="flex items-center gap-3 px-4 py-2.5 text-sm text-gray-text hover:text-primary hover:bg-gray-50 transition-colors">
+                                    <i class="fas fa-database text-primary/60 w-4"></i>
+                                    Data Entry & EMR
+                                </a>
+                                <a href="services.html#claims" class="flex items-center gap-3 px-4 py-2.5 text-sm text-gray-text hover:text-primary hover:bg-gray-50 transition-colors">
+                                    <i class="fas fa-file-invoice-dollar text-primary/60 w-4"></i>
+                                    Claims Processing
+                                </a>
+                                <a href="services.html#rcm" class="flex items-center gap-3 px-4 py-2.5 text-sm text-gray-text hover:text-primary hover:bg-gray-50 transition-colors">
+                                    <i class="fas fa-chart-line text-primary/60 w-4"></i>
+                                    Revenue Cycle (RCM)
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Get Quote Button -->
+                <a href="quote.html" class="text-white px-5 py-2 rounded-full text-sm font-medium transition-all hover:shadow-lg" style="background: linear-gradient(90deg, #b8e4f7 0%, #0ea5e9 50%, #0369a1 100%);">
+                    Get Quote
+                </a>
+
+                <!-- Mobile Menu Button -->
+                <button class="md:hidden text-dark-text">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                    </svg>
+                </button>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero-gradient py-12 lg:py-20 relative overflow-hidden">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col lg:flex-row items-center gap-8 lg:gap-12">
+                <!-- Left Content -->
+                <div class="lg:w-1/2 z-10">
+                    <h1 class="text-4xl md:text-5xl lg:text-[52px] font-bold text-dark-text leading-tight mb-6">
+                        <span class="text-primary">Reliable</span> Medical Transcription & Back-Office Support
+                    </h1>
+                    <p class="text-gray-text text-sm mb-8 leading-relaxed max-w-md">
+                        We help <a href="#" class="text-primary underline">healthcare providers</a> reduce workload, improve accuracy, and streamline revenue with secure, <span class="text-primary">HIPAA-compliant</span> support services.
+                    </p>
+                    <a href="#services" class="inline-flex items-center gap-2 text-white px-6 py-3 rounded-full text-sm font-medium transition-all hover:shadow-lg" style="background: linear-gradient(90deg, #b8e4f7 0%, #0ea5e9 50%, #0369a1 100%);">
+                        Our Services
+                        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+                        </svg>
+                    </a>
+                </div>
+                
+                <!-- Right Image with decorative elements -->
+                <div class="lg:w-1/2 relative flex justify-center">
+                    <!-- Light blue background circle -->
+                    <div class="absolute right-0 top-1/2 transform -translate-y-1/2 w-[350px] h-[350px] lg:w-[450px] lg:h-[450px] bg-sky-200 rounded-full hidden md:block"></div>
+                    
+                    <!-- Dashed circle decoration -->
+                    <div class="absolute right-[-20px] top-1/2 transform -translate-y-1/2 w-[380px] h-[380px] lg:w-[480px] lg:h-[480px] dashed-circle hidden lg:block"></div>
+                    
+                    <!-- Doctor Image -->
+                    <div class="relative z-10">
+                        <img src="images/doctorhome.png" alt="Medical Professional with Headset" class="w-full max-w-sm mx-auto lg:max-w-md object-contain">
+                        
+                        <!-- Tooltip Box with quote marks - centered at bottom -->
+                        <div class="absolute -bottom-16 left-1/2 transform -translate-x-1/2 bg-white rounded-xl shadow-lg p-4 w-[280px] z-20">
+                            <!-- Blue quotation marks -->
+                            <div class="absolute -top-5 left-4">
+                                <svg class="w-10 h-10 text-primary" fill="currentColor" viewBox="0 0 24 24">
+                                    <path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h3.983v10h-9.983z"/>
+                                </svg>
+                            </div>
+                            <p class="text-xs text-gray-text leading-relaxed pt-3">
+                                From data entry to revenue cycle management, Digiscribe delivers accurate, scalable healthcare support—24/7.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Decorative dots -->
+        <div class="absolute left-10 top-1/3 hidden lg:block">
+            <div class="grid grid-cols-3 gap-2">
+                <div class="w-2 h-2 bg-primary/20 rounded-full"></div>
+                <div class="w-2 h-2 bg-primary/20 rounded-full"></div>
+                <div class="w-2 h-2 bg-primary/20 rounded-full"></div>
+                <div class="w-2 h-2 bg-primary/20 rounded-full"></div>
+                <div class="w-2 h-2 bg-primary/20 rounded-full"></div>
+                <div class="w-2 h-2 bg-primary/20 rounded-full"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Awards & Recognition Section with Carousel -->
+    <section class="py-12 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-3xl md:text-4xl font-semibold text-center mb-10">
+                <span class="text-primary">Awards</span> <span class="text-dark-text">&</span> <span class="text-primary">Recognition</span>
+            </h2>
+            
+            <!-- Carousel Container -->
+            <div class="relative max-w-4xl mx-auto">
+                <!-- Carousel Slides -->
+                <div id="awardsCarousel" class="overflow-hidden">
+                    <!-- Slide 1 -->
+                    <div class="carousel-slide active justify-center items-center gap-8 md:gap-16 py-8">
+                        <!-- Placeholder Logo 1 -->
+                        <div class="flex items-center gap-3">
+                            <div class="flex gap-1">
+                                <div class="w-3 h-12 bg-primary/30 rounded"></div>
+                                <div class="w-3 h-16 bg-primary rounded"></div>
+                                <div class="w-3 h-10 bg-primary/50 rounded"></div>
+                            </div>
+                            <div class="w-8 h-8 bg-red-200 transform rotate-45"></div>
+                        </div>
+                        
+                        <!-- APAC Insider Logo -->
+                        <div class="flex items-baseline">
+                            <span class="text-5xl font-bold text-gray-800">A</span>
+                            <span class="text-5xl font-bold text-primary">PAC</span>
+                            <div class="ml-1 flex flex-col justify-end">
+                                <span class="text-2xl text-gray-400 font-light leading-none">insider</span>
+                            </div>
+                        </div>
+                        
+                        <!-- ifo Logo -->
+                        <div class="flex items-baseline">
+                            <span class="text-4xl font-light text-primary">i</span>
+                            <span class="text-4xl font-semibold text-primary italic">fo</span>
+                        </div>
+                    </div>
+                    
+                    <!-- Slide 2 (Placeholder) -->
+                    <div class="carousel-slide justify-center items-center gap-8 md:gap-16 py-8">
+                        <div class="text-center">
+                            <div class="w-32 h-16 bg-gray-200 rounded-lg mx-auto mb-2 flex items-center justify-center">
+                                <span class="text-gray-400 text-xs">Award Logo</span>
+                            </div>
+                        </div>
+                        <div class="text-center">
+                            <div class="w-32 h-16 bg-gray-200 rounded-lg mx-auto mb-2 flex items-center justify-center">
+                                <span class="text-gray-400 text-xs">Award Logo</span>
+                            </div>
+                        </div>
+                        <div class="text-center">
+                            <div class="w-32 h-16 bg-gray-200 rounded-lg mx-auto mb-2 flex items-center justify-center">
+                                <span class="text-gray-400 text-xs">Award Logo</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Slide 3 (Placeholder) -->
+                    <div class="carousel-slide justify-center items-center gap-8 md:gap-16 py-8">
+                        <div class="text-center">
+                            <div class="w-32 h-16 bg-gray-200 rounded-lg mx-auto mb-2 flex items-center justify-center">
+                                <span class="text-gray-400 text-xs">Award Logo</span>
+                            </div>
+                        </div>
+                        <div class="text-center">
+                            <div class="w-32 h-16 bg-gray-200 rounded-lg mx-auto mb-2 flex items-center justify-center">
+                                <span class="text-gray-400 text-xs">Award Logo</span>
+                            </div>
+                        </div>
+                        <div class="text-center">
+                            <div class="w-32 h-16 bg-gray-200 rounded-lg mx-auto mb-2 flex items-center justify-center">
+                                <span class="text-gray-400 text-xs">Award Logo</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Carousel Dots -->
+                <div class="flex justify-center gap-2 mt-6">
+                    <button class="carousel-dot active w-3 h-3 bg-primary rounded-full" data-slide="0"></button>
+                    <button class="carousel-dot w-3 h-3 bg-gray-300 rounded-full" data-slide="1"></button>
+                    <button class="carousel-dot w-3 h-3 bg-gray-300 rounded-full" data-slide="2"></button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="py-16 bg-gray-50 relative overflow-hidden">
+        <!-- Wave decoration top left -->
+        <div class="absolute top-8 left-8 hidden md:block z-0 pointer-events-none">
+            <svg width="120" height="60" viewBox="0 0 120 60" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M0 15 Q 15 5, 30 15 T 60 15 T 90 15 T 120 15" stroke="#7dd3fc" stroke-width="2" fill="none"/>
+                <path d="M0 30 Q 15 20, 30 30 T 60 30 T 90 30 T 120 30" stroke="#38bdf8" stroke-width="2" fill="none"/>
+                <path d="M0 45 Q 15 35, 30 45 T 60 45 T 90 45 T 120 45" stroke="#0ea5e9" stroke-width="2" fill="none"/>
+            </svg>
+        </div>
+        
+        <!-- Wave decoration bottom right -->
+        <div class="absolute bottom-8 right-8 hidden md:block z-0 pointer-events-none">
+            <svg width="120" height="60" viewBox="0 0 120 60" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M0 15 Q 15 5, 30 15 T 60 15 T 90 15 T 120 15" stroke="#7dd3fc" stroke-width="2" fill="none"/>
+                <path d="M0 30 Q 15 20, 30 30 T 60 30 T 90 30 T 120 30" stroke="#38bdf8" stroke-width="2" fill="none"/>
+                <path d="M0 45 Q 15 35, 30 45 T 60 45 T 90 45 T 120 45" stroke="#0ea5e9" stroke-width="2" fill="none"/>
+            </svg>
+        </div>
+        
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <h2 class="text-3xl md:text-4xl font-semibold text-center text-dark-text mb-4">
+                Core <span class="gradient-text">Services</span> We Offer
+            </h2>
+            <p class="text-center text-gray-text text-sm mb-12 max-w-2xl mx-auto">
+                Comprehensive transcription, data processing, and documentation solutions for your business
+            </p>
+
+            <!-- Services Grid - Top Row (2 cards) -->
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-4xl mx-auto mb-6">
+                <!-- Service 1: Medical Transcription -->
+                <a href="services.html#transcription" class="service-card bg-white rounded-xl p-6 shadow-sm border border-primary/30 transition-all duration-300 block hover:shadow-md hover:border-primary">
+                    <div class="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center mb-4">
+                        <i class="fas fa-file-medical text-primary text-xl"></i>
+                    </div>
+                    <h3 class="text-base font-semibold text-primary mb-2">Medical Transcription & Documentation</h3>
+                    <p class="text-xs text-gray-text leading-relaxed">Offers a reliable medical transcription services designed to support patients and healthcare professionals alike. Our company prioritizes secure transfers and ensure peace of mind for our clients.</p>
+                </a>
+
+                <!-- Service 2: Data Entry & EMR Management -->
+                <a href="services.html#data-entry" class="service-card bg-white rounded-xl p-6 shadow-sm border border-primary/30 transition-all duration-300 block hover:shadow-md hover:border-primary">
+                    <div class="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center mb-4">
+                        <i class="fas fa-calendar-alt text-primary text-xl"></i>
+                    </div>
+                    <h3 class="text-base font-semibold text-primary mb-2">Data Entry & EMR Management</h3>
+                    <p class="text-xs text-gray-text leading-relaxed">Handling medical billing, charge entry, and insurance claims (including Workers' Compensation and DME).</p>
+                </a>
+            </div>
+
+            <!-- Services Grid - Bottom Row (3 cards) -->
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <!-- Service 3: Claims Processing & Medical Billing -->
+                <a href="services.html#claims" class="service-card bg-white rounded-xl p-6 shadow-sm border border-primary/30 transition-all duration-300 block hover:shadow-md hover:border-primary">
+                    <div class="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center mb-4">
+                        <i class="fas fa-file-invoice-dollar text-primary text-xl"></i>
+                    </div>
+                    <h3 class="text-base font-semibold text-primary mb-2">Claims Processing & Medical Billing</h3>
+                    <p class="text-xs text-gray-text leading-relaxed">Transitioning data between systems and indexing medical records.</p>
+                </a>
+
+                <!-- Service 4: EMR Data Migration -->
+                <a href="services.html" class="service-card bg-white rounded-xl p-6 shadow-sm border border-primary/30 transition-all duration-300 block hover:shadow-md hover:border-primary">
+                    <div class="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center mb-4">
+                        <i class="fas fa-hospital-user text-primary text-xl"></i>
+                    </div>
+                    <h3 class="text-base font-semibold text-primary mb-2">EMR Data Migration & Chart Building</h3>
+                    <p class="text-xs text-gray-text leading-relaxed">Offering 24/7 technical support to reduce downtime and training staff on new EHR systems.</p>
+                </a>
+
+                <!-- Service 5: Revenue Cycle Management -->
+                <a href="services.html#rcm" class="service-card bg-white rounded-xl p-6 shadow-sm border border-primary/30 transition-all duration-300 block hover:shadow-md hover:border-primary">
+                    <div class="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center mb-4">
+                        <i class="fas fa-hand-holding-medical text-primary text-xl"></i>
+                    </div>
+                    <h3 class="text-base font-semibold text-primary mb-2">Revenue Cycle Management (RCM)</h3>
+                    <p class="text-xs text-gray-text leading-relaxed">Improving financial outcomes through end-to-end billing support.</p>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Award Banner Section -->
+    <section class="py-16 bg-white">
+        <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="border-2 border-primary/20 rounded-2xl p-8 md:p-12">
+                <div class="flex flex-col md:flex-row items-center gap-8">
+                    <!-- Certificate Image -->
+                    <div class="md:w-2/5">
+                        <div class="bg-gradient-to-br from-sky-50 to-white rounded-xl p-4 border border-gray-100">
+                            <img src="images/awards.jpg" alt="2023 APAC Insider Business Award" class="w-full rounded-lg shadow-md">
+                        </div>
+                    </div>
+                    
+                    <!-- Content -->
+                    <div class="md:w-3/5 text-center md:text-left">
+                        <p class="text-gray-text text-base md:text-lg mb-6 leading-relaxed">
+                            Digiscribe was honored with the <span class="font-semibold">2023 APAC Insider Business Award</span> for outstanding service quality, innovation, and client satisfaction across the region. Our relentless focus on accuracy, secure workflows, and rapid turnaround set a new benchmark for medical transcription. This award recognizes not just our technology but the dedication of every team member who makes Digiscribe a trusted global partner.
+                        </p>
+                        <a href="about.html" class="inline-flex items-center gap-2 bg-primary hover:bg-primary-dark text-white px-6 py-3 rounded-full text-sm font-medium transition-colors">
+                            Learn more about us
+                        </a>
+                    </div>
+                </div>
+                <!-- South-East Asia BPO Title - Centered at Bottom -->
+                <div class="mt-8 pt-6 border-t border-gray-200 text-center">
+                    <p class="text-2xl md:text-3xl">
+                        <span class="text-primary font-semibold">South-East Asia BPO:</span> 
+                        <span class="text-dark-text font-medium">Consultancy of the Year</span>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-50 border-t border-gray-100">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <!-- Company Info -->
+                <div>
+                    <a href="index.html" class="inline-block mb-4">
+                        <img src="images/DigiscribeLogoRB.png" alt="DigiScribe Transcription Corp." class="h-16 w-auto">
+                    </a>
+                    <p class="text-xs text-gray-text leading-relaxed mb-6">
+                        A Philippine-based Medical Transcription Company Serving the Information Technology Enabled Services (ITES) Sector.
+                    </p>
+                    <div class="flex gap-3">
+                        <a href="#" class="w-8 h-8 bg-primary rounded flex items-center justify-center hover:bg-primary-dark transition-colors">
+                            <i class="fab fa-linkedin-in text-white text-sm"></i>
+                        </a>
+                        <a href="#" class="w-8 h-8 bg-primary rounded flex items-center justify-center hover:bg-primary-dark transition-colors">
+                            <i class="fab fa-facebook-f text-white text-sm"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Office Hours -->
+                <div>
+                    <h3 class="text-sm font-semibold text-dark-text mb-4">Office Hours</h3>
+                    <div class="space-y-2 text-xs text-gray-text">
+                        <p>Monday - Saturday: 7:00 AM - 6:00 PM</p>
+                        <p>Sunday: Closed</p>
+                        <a href="#" class="text-primary hover:underline block mt-3">Philippine Standard Time (PST)</a>
+                    </div>
+                </div>
+
+                <!-- Contact Us -->
+                <div>
+                    <h3 class="text-sm font-semibold text-dark-text mb-4">Contact Us</h3>
+                    <div class="space-y-2 text-xs text-gray-text">
+                        <p>3rd Flr VICMAR Bldg, P Burgos St,<br>Barangay 10 Batangas City,<br>Philippines 4200</p>
+                        <p class="pt-2">(043) 233-2050</p>
+                        <p>info@digiscribeasiapacific.com</p>
+                    </div>
+                </div>
+
+                <!-- Quick Links -->
+                <div>
+                    <h3 class="text-sm font-semibold text-dark-text mb-4">Quick Links</h3>
+                    <ul class="space-y-2 text-xs text-gray-text">
+                        <li><a href="index.html" class="hover:text-primary transition-colors">Home</a></li>
+                        <li><a href="about.html" class="hover:text-primary transition-colors">About Us</a></li>
+                        <li><a href="#" class="hover:text-primary transition-colors">Projects</a></li>
+                        <li><a href="#" class="hover:text-primary transition-colors">Services</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- Copyright -->
+        <div class="border-t border-gray-200">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
+                <p class="text-center text-xs text-gray-400">
+                    Digiscribe Transcription Corp 2026 © All Rights Reserved
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Carousel JavaScript -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const slides = document.querySelectorAll('.carousel-slide');
+            const dots = document.querySelectorAll('.carousel-dot');
+            let currentSlide = 0;
+
+            function showSlide(index) {
+                slides.forEach((slide, i) => {
+                    slide.classList.remove('active');
+                    dots[i].classList.remove('active');
+                    dots[i].style.width = '12px';
+                    dots[i].style.backgroundColor = '#d1d5db';
+                });
+                
+                slides[index].classList.add('active');
+                dots[index].classList.add('active');
+                dots[index].style.width = '24px';
+                dots[index].style.backgroundColor = '#0ea5e9';
+            }
+
+            dots.forEach((dot, index) => {
+                dot.addEventListener('click', () => {
+                    currentSlide = index;
+                    showSlide(currentSlide);
+                });
+            });
+
+            // Auto-advance carousel
+            setInterval(() => {
+                currentSlide = (currentSlide + 1) % slides.length;
+                showSlide(currentSlide);
+            }, 5000);
+        });
+    </script>
+
+    <!-- Navbar Script -->
+    <script src="navbar.js"></script>
+</body>
+</html>

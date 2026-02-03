@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Medical Transcription & Documentation - DigiScribe Transcription Corp.</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#0ea5e9',
+                        'primary-dark': '#0284c7',
+                        'dark-text': '#1e293b',
+                        'gray-text': '#64748b',
+                    },
+                    fontFamily: {
+                        poppins: ['Poppins', 'sans-serif'],
+                    },
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-white font-poppins">
+    <!-- Header Navigation -->
+    <header class="bg-gray-50/70 backdrop-blur-lg shadow-sm sticky top-0 z-50 border-b border-gray-100/50">
+        <nav class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <!-- Logo -->
+                <a href="index.html" class="flex items-center">
+                    <img src="images/DigiscribeLogoRB.png" alt="DigiScribe Transcription Corp." class="h-10 w-auto">
+                </a>
+
+                <!-- Navigation Links -->
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="index.html" class="text-dark-text hover:text-primary text-base font-medium transition-colors">Home</a>
+                    <a href="about.html" class="text-dark-text hover:text-primary text-base font-medium transition-colors">About</a>
+                    <div class="relative group">
+                        <a href="projects.html" class="text-dark-text hover:text-primary text-base font-medium transition-colors flex items-center gap-1">
+                            Projects
+                            <svg class="w-4 h-4 transition-transform duration-200 group-hover:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                            </svg>
+                        </a>
+                        <!-- Projects Dropdown -->
+                        <div class="absolute top-full left-0 mt-2 w-48 bg-white rounded-xl shadow-lg border border-gray-100 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 ease-in-out transform translate-y-2 group-hover:translate-y-0 z-50">
+                            <div class="py-2">
+                                <a href="projects.html#app-marketplace" class="flex items-center gap-3 px-4 py-2.5 text-sm text-gray-text hover:text-primary hover:bg-gray-50 transition-colors">
+                                    <i class="fas fa-store text-primary/60 w-4"></i>
+                                    App Marketplace
+                                </a>
+                                <a href="projects.html#patient-fusion" class="flex items-center gap-3 px-4 py-2.5 text-sm text-gray-text hover:text-primary hover:bg-gray-50 transition-colors">
+                                    <i class="fas fa-user-injured text-primary/60 w-4"></i>
+                                    Patient Fusion
+                                </a>
+                                <a href="projects.html#practice-fusion" class="flex items-center gap-3 px-4 py-2.5 text-sm text-gray-text hover:text-primary hover:bg-gray-50 transition-colors">
+                                    <i class="fas fa-clinic-medical text-primary/60 w-4"></i>
+                                    Practice Fusion
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="relative group">
+                        <a href="services.html" class="text-primary text-base font-medium transition-colors flex items-center gap-1">
+                            Services
+                            <svg class="w-4 h-4 transition-transform duration-200 group-hover:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                            </svg>
+                        </a>
+                        <!-- Services Dropdown -->
+                        <div class="absolute top-full left-0 mt-2 w-56 bg-white rounded-xl shadow-lg border border-gray-100 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 ease-in-out transform translate-y-2 group-hover:translate-y-0 z-50">
+                            <div class="py-2">
+                                <a href="services.html#transcription" class="flex items-center gap-3 px-4 py-2.5 text-sm text-gray-text hover:text-primary hover:bg-gray-50 transition-colors">
+                                    <i class="fas fa-file-medical text-primary/60 w-4"></i>
+                                    Medical Transcription
+                                </a>
+                                <a href="services.html#data-entry" class="flex items-center gap-3 px-4 py-2.5 text-sm text-gray-text hover:text-primary hover:bg-gray-50 transition-colors">
+                                    <i class="fas fa-database text-primary/60 w-4"></i>
+                                    Data Entry & EMR
+                                </a>
+                                <a href="services.html#claims" class="flex items-center gap-3 px-4 py-2.5 text-sm text-gray-text hover:text-primary hover:bg-gray-50 transition-colors">
+                                    <i class="fas fa-file-invoice-dollar text-primary/60 w-4"></i>
+                                    Claims Processing
+                                </a>
+                                <a href="services.html#rcm" class="flex items-center gap-3 px-4 py-2.5 text-sm text-gray-text hover:text-primary hover:bg-gray-50 transition-colors">
+                                    <i class="fas fa-chart-line text-primary/60 w-4"></i>
+                                    Revenue Cycle (RCM)
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Get Quote Button -->
+                <a href="quote.html" class="bg-primary hover:bg-primary-dark text-white px-5 py-2 rounded-full text-sm font-medium transition-colors">
+                    Get Quote
+                </a>
+
+                <!-- Mobile Menu Button -->
+                <button class="md:hidden text-dark-text">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                    </svg>
+                </button>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Back to Services -->
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
+        <a href="services.html" class="inline-flex items-center gap-2 text-sm text-gray-text hover:text-primary transition-colors">
+            <i class="fas fa-arrow-left"></i>
+            <span>Back to</span>
+            <span class="text-primary font-medium">Services</span>
+        </a>
+    </div>
+
+    <!-- Service Detail Section -->
+    <section class="pb-16 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <!-- Title with sound wave decoration -->
+            <div class="flex items-center justify-center gap-4 mb-12">
+                <div class="hidden md:flex items-center gap-1">
+                    <div class="w-1 h-3 bg-primary/30 rounded"></div>
+                    <div class="w-1 h-5 bg-primary/50 rounded"></div>
+                    <div class="w-1 h-8 bg-primary rounded"></div>
+                    <div class="w-1 h-5 bg-primary/50 rounded"></div>
+                    <div class="w-1 h-3 bg-primary/30 rounded"></div>
+                </div>
+                <h1 class="text-2xl md:text-3xl font-bold gradient-text text-center">
+                    Medical Transcription & Documentation
+                </h1>
+                <div class="hidden md:flex items-center gap-1">
+                    <div class="w-1 h-3 bg-primary/30 rounded"></div>
+                    <div class="w-1 h-5 bg-primary/50 rounded"></div>
+                    <div class="w-1 h-8 bg-primary rounded"></div>
+                    <div class="w-1 h-5 bg-primary/50 rounded"></div>
+                    <div class="w-1 h-3 bg-primary/30 rounded"></div>
+                </div>
+            </div>
+
+            <!-- Content Area -->
+            <div class="max-w-4xl mx-auto">
+                <!-- Placeholder Image/Content Area -->
+                <div class="bg-gray-50 rounded-2xl border-2 border-dashed border-gray-200 p-12 mb-12 min-h-[300px] flex items-center justify-center">
+                    <div class="text-center text-gray-400">
+                        <i class="fas fa-image text-4xl mb-4"></i>
+                        <p class="text-sm">Service Image / Content Placeholder</p>
+                    </div>
+                </div>
+
+                <!-- Features Bar -->
+                <div class="bg-primary rounded-2xl p-6 md:p-8">
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                        <!-- Accurate & Reliable -->
+                        <div class="flex items-center gap-4 text-white">
+                            <div class="w-12 h-12 bg-white/10 rounded-xl flex items-center justify-center flex-shrink-0">
+                                <i class="fas fa-check-circle text-white text-xl"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-semibold text-sm">Accurate & Reliable</h4>
+                            </div>
+                        </div>
+
+                        <!-- Streamlined Medical Records -->
+                        <div class="flex items-center gap-4 text-white">
+                            <div class="w-12 h-12 bg-white/10 rounded-xl flex items-center justify-center flex-shrink-0">
+                                <i class="fas fa-file-medical text-white text-xl"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-semibold text-sm">Streamlined Medical Records with Expert Transcription</h4>
+                            </div>
+                        </div>
+
+                        <!-- Expert Transcription -->
+                        <div class="flex items-center gap-4 text-white">
+                            <div class="w-12 h-12 bg-white/10 rounded-xl flex items-center justify-center flex-shrink-0">
+                                <i class="fas fa-user-md text-white text-xl"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-semibold text-sm">Expert Transcription for Better Healthcare Docs</h4>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-white border-t border-gray-100">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <!-- Company Info -->
+                <div>
+                    <a href="index.html" class="inline-block mb-4">
+                        <img src="images/DigiscribeLogoRB.png" alt="DigiScribe Transcription Corp." class="h-8 w-auto">
+                    </a>
+                    <p class="text-xs text-gray-text leading-relaxed mb-6">
+                        A Philippine-based Medical Transcription Company Serving the Information Technology Enabled Services (ITES) Sector.
+                    </p>
+                    <div class="flex gap-3">
+                        <a href="#" class="w-8 h-8 bg-primary rounded flex items-center justify-center hover:bg-primary-dark transition-colors">
+                            <i class="fab fa-linkedin-in text-white text-sm"></i>
+                        </a>
+                        <a href="#" class="w-8 h-8 bg-primary rounded flex items-center justify-center hover:bg-primary-dark transition-colors">
+                            <i class="fab fa-facebook-f text-white text-sm"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Office Hours -->
+                <div>
+                    <h3 class="text-sm font-semibold text-dark-text mb-4">Office Hours</h3>
+                    <div class="space-y-2 text-xs text-gray-text">
+                        <p>Monday - Saturday: 7:00 AM - 6:00 PM</p>
+                        <p>Sunday: Closed</p>
+                        <a href="#" class="text-primary hover:underline block mt-3">Philippine Standard Time (PST)</a>
+                    </div>
+                </div>
+
+                <!-- Contact Us -->
+                <div>
+                    <h3 class="text-sm font-semibold text-dark-text mb-4">Contact Us</h3>
+                    <div class="space-y-2 text-xs text-gray-text">
+                        <p>3rd Flr VICMAR Bldg, P Burgos St,<br>Barangay 10 Batangas City,<br>Philippines 4200</p>
+                        <p class="pt-2">(043) 233-2050</p>
+                        <p>info@digiscribeasiapacific.com</p>
+                    </div>
+                </div>
+
+                <!-- Quick Links -->
+                <div>
+                    <h3 class="text-sm font-semibold text-dark-text mb-4">Quick Links</h3>
+                    <ul class="space-y-2 text-xs text-gray-text">
+                        <li><a href="index.html" class="hover:text-primary transition-colors">Home</a></li>
+                        <li><a href="about.html" class="hover:text-primary transition-colors">About Us</a></li>
+                        <li><a href="projects.html" class="hover:text-primary transition-colors">Projects</a></li>
+                        <li><a href="services.html" class="hover:text-primary transition-colors">Services</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- Copyright -->
+        <div class="border-t border-gray-100">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
+                <p class="text-center text-xs text-gray-400">
+                    Digiscribe Transcription Corp 2026 © All Rights Reserved
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Navbar Script -->
+    <script src="navbar.js"></script>
+</body>
+</html>
