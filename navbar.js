@@ -6,11 +6,23 @@ document.addEventListener('DOMContentLoaded', function() {
 
     // Show navbar on page load (always visible at top)
     header.classList.add('nav-visible');
+    
+    // Check scroll position on load
+    if (window.scrollY > 10) {
+        header.classList.add('nav-scrolled');
+    }
 
-    // Show navbar when scrolling
+    // Handle scroll for background visibility
     window.addEventListener('scroll', function() {
         isScrolling = true;
         header.classList.add('nav-visible');
+
+        // Add/remove scrolled class based on scroll position
+        if (window.scrollY > 10) {
+            header.classList.add('nav-scrolled');
+        } else {
+            header.classList.remove('nav-scrolled');
+        }
 
         // Clear existing timeout
         clearTimeout(scrollTimeout);
